@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+*, *:before, *:after {
+	box-sizing:border-box;
+}
+
+body {
+	padding:$base-spacing-unit;
+	font-family:'Source Sans Pro', sans-serif;
+	margin:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+}
+
+.table {
+	width:80%;
+	border:1px solid $color-form-highlight;
+}
+
+.table-header {
+	display:flex;
+	width:80%;
+	background:#000;
+	color: #fff;
+}
+
+.table-row {
+	display:flex;
+	width:80%;
+	padding:($half-spacing-unit * 1.5) 0;
+	
+	&:nth-of-type(odd) {
+		background:$color-form-highlight;
+	}
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+}
+
+.header__item {
+	text-transform:uppercase;
+}
+
+.btn,.button {
+	border-radius: 4px;
+	background-color: #f5a937;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 18px;
+	padding: 10px;
+	/*width: 100px;*/
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.btn-load {
+	border-radius: 4px;
+	background-color: #f4511e;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 18px;
+	padding: 10px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.btn-load span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-disable {
+	background-color: #DDD;
+	border-radius: 4px;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 18px;
+	padding: 10px;
+	transition: all 0.5s;
+	margin: 5px;
+}
+
+#to_do_form, .login_user , .outer{
+	display: none;
+}
+#to_do_form,.register_user, .login_user{
+	margin-left: 30px;
+}
+.box {
+    font-size: 20px;
+    border-radius: 0px;
+    padding: 10px;
+}
+
+.user_class, .outer{
+	margin: 20px;
+}

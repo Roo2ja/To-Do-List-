@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title>To Do App</title>
+
+<!--script src="main.js"></script-->
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="javascript1.js"></script>
+	</head>
+
+
+	<body>
+		
+		<div class='user_class'>
+			<div class='register_user' id='register_user'>
+				<form method="POST" action="">
+					<label  for="name">User Name</label><br>
+					<input required class="box" type="text" name="name" id="name" value="" placeholder="User Name"><br><br>
+				
+					<label for-="email">Email Id</label><br>
+					<input required class="box" type="email" name="email" id="email" value="" placeholder="Email Id"><br><br>
+
+					<label for-="address">Address</label><br>
+					<input required class="box" type="text" name="address" id="address" value="" placeholder="Address"><br><br>
+
+					<label for-="gender">Gender</label><br>
+					<select required class="box" name="gender" id="gender">
+						<option value=''>Select Gender</option>
+						<option value='female' >Female</option>
+						<option value='male' >Male</option>
+						<option value='other' >Other</option>
+					</select><br><br><br>
+					
+					<!--label for-="profile_pic">Profile Pic</label><br>
+					<input required class="box" type="file" name="profile_pic" id="profile_pic" value="" placeholder="profile_pic"><br><br-->
+
+					<label id='password_label' for-="gender">Password</label><br>
+					<input required class="box" type="password" name="password" id="password" value="" placeholder="password">
+
+					<br><br><br>
+					<div id ='submit_user_data'>
+					<!--input id='create_user_btn' class="button" type="button" onclick="create_user(messages)" value="Submit"-->
+					<input id='create_user_btn' class="button" type="button" value="Submit">
+					</div>
+				</form>
+			</div>
+
+			<div id='login_user' class='login_user'>
+
+				<img  id='prop'>
+
+				<form method="POST" action="">
+					<label for-="email">Email Id</label><br>
+					<input required class="box" type="email" name="email" id="login_email" value="" placeholder="Email Id">
+					<br><br>
+					<label for-="gender">Password</label><br>
+					<input required class="box" type="password" name="password" id="login_password" value="" placeholder="password">
+					<br><br><br>
+					<input class="button" type="button" id='login_user_btn' value="Submit">
+					<!--input class="button" type="button" onclick="login_user(messages)" value="Submit"-->
+				</form>
+
+			</div>
+		</div>
+
+		<div class="outer" id="outer">
+			<div class="header" id="header">
+				<input class="btn" type="button" id='view_user_btn' value="View User">
+				<!--input id="check" class="btn" type="button" onclick="view_user()" value="View User"-->
+				<!--input id="check" class="btn" type="button" onclick="add_to_do()" value="Add To Do"-->
+				<input id="add_to_do_btn" class="btn" type="button" value="Add To Do">
+				<input class="button" type="button" onclick="sortTable()" value="Sort The list ">
+				<input class="button" type="button" id='logout_user_btn' value="Logout">
+				<!--input class="button" type="button" onclick="logout(messages)" value="Logout"-->
+				<!--input id="check" class="btn" type="button" onclick="view_user()" value="View User"-->
+			</div>
+
+			<div id='view_user_profile'>
+				
+			</div>
+
+
+		<div id='to_do_form'>
+			<form method="POST" action="">
+					
+				<label  for="title">Title</label><br>
+				<input class="box" type="text" name="title" id="title" value="" placeholder="title"><br><br><br>
+				
+				<label for-="lname">Description</label><br>
+				<input class="box" type="text" name="description" id="description" value=""placeholder="description">
+				<br><br><br>
+				<div id='submit_button_todo'>
+					<!--input class="button" type="button" onclick="submit_data()" value="Submit"-->
+					<input class="button" id='add_to_do_list_btn' type="button" onclick="submit_data()" value="Submit">
+				</div>
+			</form>
+		</div>
+
+
+			
+			<!--input class="button" type="button" onclick="sortTable()" value="Sort The list "-->
+
+			<table class="table" id="userData">
+			<tr class="table-header">
+				<!--th class="header__item">Sr. No. </th-->
+				<th class="header__item">User Name</th>
+				<th class="header__item">To Do List</th> 
+				<th class="header__item">Time</th>
+				<th class="header__item" colspan = '2' >Operations</th>
+			</tr>
+			<tr class="table-row">
+				<td class="header__item">
+					<label id="userId"></label>
+				</td>
+				<td class="header__item">
+					<label id="titleId"></label>
+				</td>
+				<td class="header__item">
+					<label id="isCompletedId"></label>
+				</td>
+			</tr>
+		</table>
+
+
+		</div>
+		<script src="modular_js.js"></script>
+
+	
+	</body>
+
+</html>
+
